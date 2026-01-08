@@ -1,0 +1,89 @@
+nav:
+  features: "Features"
+  screenshots: "Screenshots"
+  download: "Download"
+  github: "GitHub"
+
+hero:
+  title: "Track Your Wealth in Sats"
+  subtitle: "Your finances. Your machine. No cloud."
+  description: "Free, open-source desktop app that puts bitcoin at the center of your personal finances."
+  cta_primary: "Download"
+  cta_secondary: "Source Code"
+  trust_bar: "Free and Open Source"
+
+about:
+  title: "Built for a Bitcoin Standard"
+  paragraph1: "Most finance apps treat bitcoin as an afterthought — just another line in a spreadsheet designed for fiat. They want your data in their cloud. They charge monthly fees. They don't get it."
+  paragraph2: "VALT is different. Built by a bitcoiner who got tired of waiting for the right tool to exist."
+  paragraph3: "Your entire financial picture, denominated in sats. As it should be."
+
+features:
+  title: "Features"
+  subtitle: "What you actually need to manage your finances properly."
+
+  privacy:
+    title: "Local Data Only"
+    description: "Your data stays on your machine. No servers. No sync. No leaks."
+
+  opensource:
+    title: "Free and Open Source"
+    description: "MIT License. No subscriptions. No premium tiers. Fork it if you want."
+
+  accounts:
+    title: "Unified Accounts"
+    description: "Track fiat and bitcoin accounts in one place."
+
+  fixed_expenses:
+    title: "Fixed Expenses"
+    description: "Register recurring bills. Know when they're due."
+
+  avg_price:
+    title: "Cost Basis Tracking"
+    description: "Track your average purchase price for bitcoin and other assets."
+
+  currencies:
+    title: "Multiple Currencies"
+    description: "USD, EUR, BRL and more. Automatic conversion."
+
+  bitcoin_terms:
+    title: "Bitcoin-Denominated View"
+    description: "See your net worth and cash flow in sats."
+
+  cross_platform:
+    title: "Cross-Platform"
+    description: "Windows. Linux. macOS."
+
+  portable:
+    title: "Portable"
+    description: "No installation required. Just download and run."
+
+screenshots:
+  title: "Screenshots"
+  subtitle: "Clean interface. No bloat."
+  click_expand: "Click to expand"
+
+download:
+  title: "Download"
+  subtitle: "Pick your platform."
+  risk_reversal: ""
+  windows: "Windows"
+  linux: "Linux"
+  macos: "macOS"
+  or: "or"
+  build_source: "Build from source"
+
+footer:
+  tagline: "Personal finance for bitcoiners."
+  made_with: "Made"
+  by: "by @BtcChicoFatal"
+  links:
+    github: "GitHub"
+    releases: "Releases"
+    issues: "Report Issue"
+  copyright: "VALT is open source software released under the MIT License."
+
+language:
+  current: "English"
+  switch: "Português"
+  switch_url: "/pt-br/"

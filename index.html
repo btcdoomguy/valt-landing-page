@@ -1,0 +1,26 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <meta http-equiv="refresh" content="0; url=/en/">
+  <link rel="canonical" href="/en/">
+  <script>
+    // Detect browser language and redirect accordingly
+    (function() {
+      var lang = navigator.language || navigator.userLanguage;
+      if (lang && lang.toLowerCase().startsWith('pt')) {
+        window.location.href = '/pt-br/';
+      } else {
+        window.location.href = '/en/';
+      }
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting to <a href="/en/">English version</a>...</p>
+</body>
+</html>

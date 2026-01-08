@@ -1,0 +1,73 @@
+<script>
+(function() {
+  const REPO = 'btcdoomguy/valt';
+  const API_URL = `https://api.github.com/repos/${REPO}/releases/latest`;
+
+  // Asset name patterns (case-insensitive)
+  const patterns = {
+    windows: /win|windows/i,
+    linux: /linux|ubuntu|debian/i,
+    macos: /mac|osx|darwin/i
+  };
+
+  async function fetchLatestRelease() {
+    try {
+      const response = await fetch(API_URL);
+      if (!response.ok) return null;
+      return await response.json();
+    } catch (e) {
+      console.warn('Could not fetch latest release:', e);
+      return null;
+    }
+  }
+
+  function findAsset(assets, pattern) {
+    return assets.find(a => pattern.test(a.name));
+  }
+
+  async function updateDownloadLinks() {
+    const release = await fetchLatestRelease();
+    if (!release || !release.assets || release.assets.length === 0) return;
+
+    const assets = release.assets;
+
+    // Update Windows link
+    const winAsset = findAsset(assets, patterns.windows);
+    const winBtn = document.querySelector('[data-platform="windows"]');
+    if (winAsset && winBtn) {
+      winBtn.href = winAsset.browser_download_url;
+      winBtn.setAttribute('title', winAsset.name);
+    }
+
+    // Update Linux link
+    const linuxAsset = findAsset(assets, patterns.linux);
+    const linuxBtn = document.querySelector('[data-platform="linux"]');
+    if (linuxAsset && linuxBtn) {
+      linuxBtn.href = linuxAsset.browser_download_url;
+      linuxBtn.setAttribute('title', linuxAsset.name);
+    }
+
+    // Update macOS link
+    const macAsset = findAsset(assets, patterns.macos);
+    const macBtn = document.querySelector('[data-platform="macos"]');
+    if (macAsset && macBtn) {
+      macBtn.href = macAsset.browser_download_url;
+      macBtn.setAttribute('title', macAsset.name);
+    }
+
+    // Update version badge if exists
+    const versionBadge = document.querySelector('.release-version');
+    if (versionBadge && release.tag_name) {
+      versionBadge.textContent = release.tag_name;
+      versionBadge.style.display = 'inline-block';
+    }
+  }
+
+  // Run when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updateDownloadLinks);
+  } else {
+    updateDownloadLinks();
+  }
+})();
+</script>

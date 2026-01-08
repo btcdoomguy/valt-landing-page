@@ -1,0 +1,34 @@
+title: VALT
+description: Personal budget management for bitcoiners
+baseurl: ""
+url: "https://valtapp.com"
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+
+# Default language
+lang: en
+
+# Available languages
+languages:
+  - en
+  - pt-br
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+
+# Collections for multilingual support
+defaults:
+  - scope:
+      path: "en"
+    values:
+      lang: "en"
+  - scope:
+      path: "pt-br"
+    values:
+      lang: "pt-br"
