@@ -3,6 +3,7 @@ nav:
   screenshots: "Screenshots"
   download: "Download"
   github: "GitHub"
+  docs: "Docs"
 
 hero:
   title: "Acompanhe Seu Patrimônio em Sats"
@@ -79,6 +80,7 @@ footer:
   by: "por @BtcChicoFatal"
   links:
     github: "GitHub"
+    docs: "Documentação"
     releases: "Releases"
     issues: "Reportar Problema"
   copyright: "VALT é um software de código aberto disponibilizado sob a Licença MIT."

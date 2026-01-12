@@ -3,6 +3,7 @@ nav:
   screenshots: "Screenshots"
   download: "Download"
   github: "GitHub"
+  docs: "Docs"
 
 hero:
   title: "Track Your Wealth in Sats"
@@ -79,6 +80,7 @@ footer:
   by: "by @BtcChicoFatal"
   links:
     github: "GitHub"
+    docs: "Documentation"
     releases: "Releases"
     issues: "Report Issue"
   copyright: "VALT is open source software released under the MIT License."
