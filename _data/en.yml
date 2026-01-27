@@ -59,6 +59,10 @@ features:
     title: "Portable"
     description: "No installation required. Just download and run."
 
+  mcp_server:
+    title: "MCP Server"
+    description: "Connect your local AI and play around with your data."
+
 screenshots:
   title: "Screenshots"
   subtitle: "Clean interface. No bloat."

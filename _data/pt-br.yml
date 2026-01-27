@@ -59,6 +59,10 @@ features:
     title: "Portátil"
     description: "Não precisa instalar. Baixou, rodou."
 
+  mcp_server:
+    title: "Servidor MCP"
+    description: "Conecte sua IA local e brinque com seus dados."
+
 screenshots:
   title: "Screenshots"
   subtitle: "Interface limpa. Sem firula."
