@@ -1,11 +1,17 @@
 <script>
   const screenshots = [
-    '/assets/images/screenshots/new/overview.png',
-    '/assets/images/screenshots/new/reports.png',
-    '/assets/images/screenshots/new/avgprice.png',
-    '/assets/images/screenshots/new/theme1.png',
-    '/assets/images/screenshots/new/theme2.png',
-    '/assets/images/screenshots/new/theme3.png'
+    '/assets/images/screenshots/transactions.png',
+    '/assets/images/screenshots/transaction.png',
+    '/assets/images/screenshots/assets.png',
+    '/assets/images/screenshots/reports1.png',
+    '/assets/images/screenshots/reports2.png',
+    '/assets/images/screenshots/reports3.png',
+    '/assets/images/screenshots/reports4.png',
+    '/assets/images/screenshots/avgprice1.png',
+    '/assets/images/screenshots/avgprice2.png',
+    '/assets/images/screenshots/themes1.png',
+    '/assets/images/screenshots/themes2.png',
+    '/assets/images/screenshots/themes3.png'
   ];
 
   let currentIndex = 0;
@@ -45,5 +51,123 @@
     } else if (e.key === 'ArrowRight') {
       navigateLightbox(1);
     }
+  });
+
+  // Screenshot carousel
+  document.addEventListener('DOMContentLoaded', function() {
+    const track = document.querySelector('.screenshots-track');
+    const items = document.querySelectorAll('.screenshot-item');
+    const prevBtn = document.querySelector('.carousel-prev');
+    const nextBtn = document.querySelector('.carousel-next');
+    const dotsContainer = document.querySelector('.carousel-dots');
+    const carousel = document.querySelector('.screenshots-carousel');
+
+    if (!track || !items.length || !prevBtn || !nextBtn || !dotsContainer || !carousel) return;
+
+    let currentPage = 0;
+    let itemsPerPage = getItemsPerPage();
+    let totalPages = Math.ceil(items.length / itemsPerPage);
+    let autoplayInterval;
+
+    function getItemsPerPage() {
+      if (window.innerWidth <= 768) return 1;
+      if (window.innerWidth <= 1024) return 2;
+      return 3;
+    }
+
+    function createDots() {
+      dotsContainer.innerHTML = '';
+      for (let i = 0; i < totalPages; i++) {
+        const dot = document.createElement('button');
+        dot.className = 'carousel-dot' + (i === currentPage ? ' active' : '');
+        dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+        dot.addEventListener('click', () => goToPage(i));
+        dotsContainer.appendChild(dot);
+      }
+    }
+
+    function updateCarousel() {
+      const translate = -(currentPage * 100);
+      track.style.transform = 'translateX(' + translate + '%)';
+
+      const dots = dotsContainer.querySelectorAll('.carousel-dot');
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentPage);
+      });
+    }
+
+    function goToPage(page) {
+      currentPage = Math.max(0, Math.min(page, totalPages - 1));
+      updateCarousel();
+    }
+
+    function nextPage() {
+      goToPage((currentPage + 1) % totalPages);
+    }
+
+    function prevPage() {
+      goToPage((currentPage - 1 + totalPages) % totalPages);
+    }
+
+    function startAutoplay() {
+      stopAutoplay();
+      autoplayInterval = setInterval(nextPage, 5000);
+    }
+
+    function stopAutoplay() {
+      if (autoplayInterval) {
+        clearInterval(autoplayInterval);
+        autoplayInterval = null;
+      }
+    }
+
+    function handleResize() {
+      const newItemsPerPage = getItemsPerPage();
+      if (newItemsPerPage !== itemsPerPage) {
+        itemsPerPage = newItemsPerPage;
+        totalPages = Math.ceil(items.length / itemsPerPage);
+        currentPage = Math.min(currentPage, totalPages - 1);
+        createDots();
+        updateCarousel();
+      }
+    }
+
+    prevBtn.addEventListener('click', function() {
+      prevPage();
+      startAutoplay();
+    });
+
+    nextBtn.addEventListener('click', function() {
+      nextPage();
+      startAutoplay();
+    });
+
+    carousel.addEventListener('mouseenter', stopAutoplay);
+    carousel.addEventListener('mouseleave', startAutoplay);
+
+    // Touch support
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    carousel.addEventListener('touchstart', function(e) {
+      touchStartX = e.changedTouches[0].screenX;
+      stopAutoplay();
+    }, { passive: true });
+
+    carousel.addEventListener('touchend', function(e) {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) nextPage();
+        else prevPage();
+      }
+      startAutoplay();
+    }, { passive: true });
+
+    window.addEventListener('resize', handleResize);
+
+    createDots();
+    updateCarousel();
+    startAutoplay();
   });
 </script>

@@ -1,0 +1,66 @@
+<!-- Screenshots Section -->
+<section id="screenshots" class="screenshots">
+  <div class="container">
+    <div class="section-header">
+      <h2>{{ t.screenshots.title }}</h2>
+      <p>{{ t.screenshots.subtitle }}</p>
+    </div>
+
+    <div class="screenshots-carousel-wrapper">
+      <button class="carousel-arrow carousel-prev" aria-label="Previous screenshots">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+      </button>
+
+      <div class="screenshots-carousel">
+        <div class="screenshots-track">
+          <div class="screenshot-item" onclick="openLightbox(0)">
+            <img src="/assets/images/screenshots/transactions.png" alt="Transactions Overview">
+          </div>
+          <div class="screenshot-item" onclick="openLightbox(1)">
+            <img src="/assets/images/screenshots/transaction.png" alt="Transaction Details">
+          </div>
+          <div class="screenshot-item" onclick="openLightbox(2)">
+            <img src="/assets/images/screenshots/assets.png" alt="Assets">
+          </div>
+          <div class="screenshot-item" onclick="openLightbox(3)">
+            <img src="/assets/images/screenshots/reports1.png" alt="Reports Overview">
+          </div>
+          <div class="screenshot-item" onclick="openLightbox(4)">
+            <img src="/assets/images/screenshots/reports2.png" alt="Reports Detail">
+          </div>
+          <div class="screenshot-item" onclick="openLightbox(5)">
+            <img src="/assets/images/screenshots/reports3.png" alt="Reports Breakdown">
+          </div>
+          <div class="screenshot-item" onclick="openLightbox(6)">
+            <img src="/assets/images/screenshots/reports4.png" alt="Reports Chart">
+          </div>
+          <div class="screenshot-item" onclick="openLightbox(7)">
+            <img src="/assets/images/screenshots/avgprice1.png" alt="Average Price">
+          </div>
+          <div class="screenshot-item" onclick="openLightbox(8)">
+            <img src="/assets/images/screenshots/avgprice2.png" alt="Average Price Detail">
+          </div>
+          <div class="screenshot-item" onclick="openLightbox(9)">
+            <img src="/assets/images/screenshots/themes1.png" alt="Dark Theme">
+          </div>
+          <div class="screenshot-item" onclick="openLightbox(10)">
+            <img src="/assets/images/screenshots/themes2.png" alt="Light Theme">
+          </div>
+          <div class="screenshot-item" onclick="openLightbox(11)">
+            <img src="/assets/images/screenshots/themes3.png" alt="Theme Preview">
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-arrow carousel-next" aria-label="Next screenshots">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="carousel-dots"></div>
+  </div>
+</section>

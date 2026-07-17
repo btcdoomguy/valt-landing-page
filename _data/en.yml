@@ -17,7 +17,23 @@ about:
   title: "Built for a Bitcoin Standard"
   paragraph1: "Most finance apps treat bitcoin as an afterthought — just another line in a spreadsheet designed for fiat. They want your data in their cloud. They charge monthly fees. They don't get it."
   paragraph2: "VALT is different. Built by a bitcoiner who got tired of waiting for the right tool to exist."
-  paragraph3: "Your entire financial picture, denominated in sats. As it should be."
+  paragraph3: "Every transaction converted to sats. Your net worth, your goals, and your entire financial picture — on your machine, as it should be."
+
+how_it_helps:
+  title: "Built to help you stack smarter"
+  subtitle: "Valt doesn't just track money. It shows you what your money was really worth."
+  opportunity_cost:
+    title: "See the real cost of every purchase"
+    description: "Every expense is automatically converted to the sats it could have bought on that day. That dinner out? You can finally see what it really cost you."
+  unified_view:
+    title: "All your wealth, one dashboard"
+    description: "Fiat accounts, bitcoin, stocks, real estate, crypto, and even BTC-backed loans. Everything in one place, denominated in sats."
+  goals:
+    title: "Goals that keep you stacking"
+    description: "Set DCA plans, HODL targets, savings-rate goals, and spending limits. Track progress automatically."
+  ai:
+    title: "Ask your data anything"
+    description: "The built-in MCP server connects to Claude, Cursor, Ollama and others. 80+ tools to query, import, and analyze without uploading anything to the cloud."
 
 features:
   title: "Features"
@@ -33,23 +49,35 @@ features:
 
   accounts:
     title: "Unified Accounts"
-    description: "Track fiat and bitcoin accounts in one place."
+    description: "Track fiat and bitcoin accounts in one place. Categorize transactions with hierarchical tags, icons, and colors."
+
+  assets:
+    title: "Assets"
+    description: "Track stocks, ETFs, real estate, commodities, crypto, leveraged positions, BTC loans, and BTC lending. All integrated into your net worth."
 
   fixed_expenses:
     title: "Fixed Expenses"
-    description: "Register recurring bills. Know when they're due."
+    description: "Register recurring bills with due dates. Track value history, get a yearly overview, and catch out-of-range payments."
 
   avg_price:
     title: "Cost Basis Tracking"
-    description: "Track your average purchase price for bitcoin and other assets."
+    description: "Track your average purchase price for bitcoin and other assets using the Brazilian rule or FIFO."
+
+  reports:
+    title: "Reports"
+    description: "Wealth charts, ATH, stack ranking, coverage, simulated BTC prices, Mayer Multiple, Rainbow Chart, Fear & Greed, and BTC dominance."
 
   currencies:
     title: "Multiple Currencies"
-    description: "USD, EUR, BRL and more. Automatic conversion."
+    description: "USD, EUR, BRL and more. Automatic conversion across 32 fiat currencies."
 
   bitcoin_terms:
     title: "Bitcoin-Denominated View"
     description: "See your net worth and cash flow in sats."
+
+  goals:
+    title: "Goals"
+    description: "Stack sats, DCA, HODL, income targets, savings rate, budgets, and net-worth-in-BTC. Automated progress tracking."
 
   cross_platform:
     title: "Cross-Platform"
@@ -61,7 +89,19 @@ features:
 
   mcp_server:
     title: "MCP Server"
-    description: "Connect your local AI and play around with your data."
+    description: "Connect your local AI — Claude, Cursor, Ollama, Open WebUI. Query and import data with 80+ tools, no cloud required."
+
+  data_import:
+    title: "Data Import"
+    description: "Import bank statements, CSV files, and historical transactions. Bring your existing data with you."
+
+  offline:
+    title: "Works Offline"
+    description: "No internet required. Your finances run entirely on your machine."
+
+  backup_export:
+    title: "Backup & Export"
+    description: "Export your data anytime. Own your records, keep full control."
 
 screenshots:
   title: "Screenshots"

@@ -17,7 +17,23 @@ about:
   title: "Feito para o Padrão Bitcoin"
   paragraph1: "A maioria dos apps de finanças trata bitcoin como um detalhe — só mais uma linha numa planilha feita pra fiat. Querem seus dados na nuvem deles. Cobram mensalidade. Não entendem."
   paragraph2: "VALT é diferente. Feito por um bitcoinheiro que cansou de esperar a ferramenta certa existir."
-  paragraph3: "Toda sua situação financeira, denominada em sats. Como deveria ser."
+  paragraph3: "Toda transação convertida em sats. Seu patrimônio, suas metas e toda sua situação financeira — na sua máquina, como deveria ser."
+
+how_it_helps:
+  title: "Feito pra você stackar mais inteligente"
+  subtitle: "O Valt não só registra dinheiro. Ele te mostra o que seu dinheiro realmente valia."
+  opportunity_cost:
+    title: "Veja o custo real de cada compra"
+    description: "Toda despesa é convertida automaticamente pros sats que ela poderia ter comprado naquele dia. Aquele jantar fora? Você finalmente vê o que ele realmente custou."
+  unified_view:
+    title: "Toda sua riqueza, um dashboard só"
+    description: "Contas em fiat, bitcoin, ações, imóveis, cripto, e até empréstimos com garantia em BTC. Tudo num lugar só, denominado em sats."
+  goals:
+    title: "Metas que te fazem stackar"
+    description: "Planos de DCA, metas de HODL, taxa de poupança, limites de gasto e patrimônio em BTC. Acompanhe o progresso automaticamente."
+  ai:
+    title: "Pergunte o que quiser pros seus dados"
+    description: "O servidor MCP integrado conecta com Claude, Cursor, Ollama e outros. Mais de 80 ferramentas pra consultar, importar e analisar sem mandar nada pra nuvem."
 
 features:
   title: "Recursos"
@@ -33,23 +49,35 @@ features:
 
   accounts:
     title: "Contas Unificadas"
-    description: "Acompanhe contas em fiat e bitcoin num só lugar."
+    description: "Acompanhe contas em fiat e bitcoin num só lugar. Categorize transações com tags hierárquicas, ícones e cores."
+
+  assets:
+    title: "Ativos"
+    description: "Acompanhe ações, ETFs, imóveis, commodities, cripto, posições alavancadas, empréstimos e lending em BTC. Tudo integrado no seu patrimônio."
 
   fixed_expenses:
     title: "Despesas Fixas"
-    description: "Cadastre contas recorrentes. Saiba quando vencem."
+    description: "Cadastre contas recorrentes com vencimentos. Acompanhe histórico de valores, veja a visão anual e identifique pagamentos fora do padrão."
 
   avg_price:
     title: "Preço Médio"
-    description: "Acompanhe seu preço médio de compra de bitcoin e outros ativos."
+    description: "Acompanhe seu preço médio de compra de bitcoin e outros ativos usando a regra brasileira ou FIFO."
+
+  reports:
+    title: "Relatórios"
+    description: "Gráficos de patrimônio, ATH, ranking de stack, cobertura, simulação de preço do BTC, Mayer Multiple, Rainbow Chart, Fear & Greed e dominância do BTC."
 
   currencies:
     title: "Múltiplas Moedas"
-    description: "BRL, USD, EUR e mais. Conversão automática."
+    description: "BRL, USD, EUR e mais. Conversão automática entre 32 moedas fiat."
 
   bitcoin_terms:
     title: "Visão em Bitcoin"
     description: "Veja seu patrimônio e fluxo de caixa em sats."
+
+  goals:
+    title: "Metas"
+    description: "Stackar sats, DCA, HODL, metas de renda, taxa de poupança, orçamentos e patrimônio em BTC. Progresso automático."
 
   cross_platform:
     title: "Multiplataforma"
@@ -61,7 +89,19 @@ features:
 
   mcp_server:
     title: "Servidor MCP"
-    description: "Conecte sua IA local e brinque com seus dados."
+    description: "Conecte sua IA local — Claude, Cursor, Ollama, Open WebUI. Consulte e importe dados com mais de 80 ferramentas, sem nuvem."
+
+  data_import:
+    title: "Importação de Dados"
+    description: "Importe extratos bancários, arquivos CSV e transações históricas. Traga seus dados existentes com você."
+
+  offline:
+    title: "Funciona Offline"
+    description: "Não precisa de internet. Suas finanças funcionam totalmente na sua máquina."
+
+  backup_export:
+    title: "Backup e Exportação"
+    description: "Exporte seus dados a qualquer momento. Você dono dos seus registros, com controle total."
 
 screenshots:
   title: "Screenshots"
